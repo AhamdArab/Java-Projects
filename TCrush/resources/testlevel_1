@@ -1,0 +1,10 @@
+TCrush-LevelDefinition:
+gb
++r
++r
+br
+
+Shapes:
+1:point
+1:column
+1:sRow
