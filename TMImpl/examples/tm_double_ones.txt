@@ -1,0 +1,25 @@
+# Turingmaschinendefinition fuer Character-Baender. Leerzeilen und Zeilen mit
+# beginnend werden ignoriert
+# Diese Machine verdoppelt die Einsen auf dem Band
+# Anzahl der Baender
+1
+# Vorinitalsierung der Baender
+1:11111
+# Zustaende der Maschine
+s1,s2,s3,s4,s5,s6
+# Startzustand
+s1
+# akzeptierte Zustaende
+s6
+# Transitionen
+s1,1 -> s2,_,R
+s1,_ -> s6,_,N
+s2,1 -> s2,1,R
+s2,_ -> s3,_,R
+s3,_ -> s4,1,L
+s3,1 -> s3,1,R
+s4,1 -> s4,1,L
+s4,_ -> s5,_,L
+s5,1 -> s5,1,L
+s5,_ -> s1,1,R
+s6,_ -> s6,_,N
